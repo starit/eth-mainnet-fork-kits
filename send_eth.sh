@@ -1,2 +1,2 @@
-npx hardhat run scripts/faucet_eth.js --network localhost
+npx hardhat run scripts/faucet_eth.js --network hardhat
 
