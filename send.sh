@@ -17,5 +17,5 @@ echo '----'
 for symbol in "${symbols[@]}"
 do
   echo 'symbol:'${symbol}
-  npx hardhat run scripts/faucet_${symbol}.js --network hardhat
+  npx hardhat run scripts/faucet_${symbol}.js --network localhost
 done

@@ -10,7 +10,8 @@ async function run() {
   const amountToSet = ethers.utils.hexlify(ethers.utils.parseEther('100000'))
 
   for (let i = 0; i < targets.length; i++) {
-    // console.log('balance', await network.provider.getBalance(targets[i]));
+	  console.log('targets[i]', targets[i], i);
+    //  console.log('balance', await network.provider.getBalance(targets[i]));
     await network.provider.send("hardhat_setBalance", [
     	targets[i],
     	amountToSet,

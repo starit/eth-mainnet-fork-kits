@@ -1,5 +1,4 @@
 require("@nomiclabs/hardhat-waffle");
-require('dotenv-flow').config();
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -20,9 +19,12 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 module.exports = {
   solidity: "0.8.4",
   networks: {
+    localhost: {
+       url: 'http://127.0.0.1:9545'
+    },
     hardhat: {
       forking: {
-	url: process.env.ARCHIVE_NODE_URL
+	url: "https://eth-mainnet.alchemyapi.io/v2/B0dOVY4J2WLAuXsF9akHKLtsv5fG65FG"
       }
     }
   }
